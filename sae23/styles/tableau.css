@@ -1,0 +1,37 @@
+table
+{
+	width: 600px;
+	border-collapse:collapse; /* Détermine si les cellules à l'intérieur d'un <table>ont des frontières communes ou séparées */
+	background-color:white;	
+}
+
+table, th, td 
+{
+	border: 1px solid black;
+}
+
+colone2
+{
+	width: 10px;
+	text-align: middle;
+}
+
+tr,td /*td : une cellule d'un tableau qui contient des données*/ /*tr :définit une ligne de cellules dans un tableau.*/
+{
+	padding:10px
+}
+
+caption /*l'élément de légende d'un tableau*/
+{
+	background-color: black;
+	color:white;
+	padding:10px;
+}
+
+th /*cellule d'en-tête pour un groupe de cellule*/
+{
+	background-color: gray;
+	color:white;
+	padding:15px;
+	
+}
