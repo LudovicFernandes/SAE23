@@ -37,7 +37,12 @@
 	
 <section>
 	
-	<h1>Compte rendu Gestion de Projet</h1>
+<h1>Choisissez une redirection :</h1>
+	<ul>
+		<li><a href="ajoutbat.php">Ajout</a></li>
+		<li><a href="ajoutsalle.php">Supp</a></li>
+		<li><a href="ajoutcapteur.php">Redirection 3</a></li>
+	</ul
 		
            
 </section>

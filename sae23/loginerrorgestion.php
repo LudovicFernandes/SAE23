@@ -1,3 +1,8 @@
+<?php
+	// Démarrage de la session
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,7 +30,7 @@
 	
 	<nav>
 		<ul id="navigation">
-			<li><a href="index.html" >Accueil</a></li>
+            <li><a href="index.html" >Accueil</a></li>
 			<li><a href="administration.html" >Administration</a></li>
      		<li><a href="consultation.html" >Consultation</a></li>			
 			<li><a href="gestion.html" >Gestion</a></li>
@@ -34,15 +39,24 @@
 		
 		</ul>
 	</nav>
-	
-<section>
-	
-	<h1>Compte rendu Gestion de Projet</h1>
-		
-           
-</section>
-
-  <aside id="last">
+		<!-- Affichage entete -->
+		<?php 
+			$_SESSION = array(); // Réinitialisation du tableau de session
+			session_destroy();   // Destruction de la session
+			unset($_SESSION);    // Destruction du tableau de session
+			include("entete.html");
+		?>
+		<section>
+			<p>
+				<br />
+				<em><strong>Administration des bâtiments : Acc&egrave;s limit&eacute; aux personnes autoris&eacute;es</strong></em>
+				<br />
+			</p>
+			<br />
+			<p class="erreur">Mot de passe non saisi ou erron&eacute; !!!</p>
+			
+		</section>
+		<aside id="last">
     <hr />
     <p><em> Validation de la page HTML5 - CSS3 </em></p>
 	<!-- Compléter les hyperliens avec vos références -->
@@ -67,8 +81,3 @@
 </body>
 </html>
  
- 
- 
- 
- 
-  
