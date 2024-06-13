@@ -27,7 +27,7 @@
 		<ul id="navigation">
 			<li><a href="index.html" >Accueil</a></li>
 			<li><a href="administration.html" >Administration</a></li>
-     		<li><a href="consultation.html" >Consultation</a></li>			
+     		<li><a href="consultation.php" >Consultation</a></li>			
 			<li><a href="gestion.html" >Gestion</a></li>
 			<li><a href="gestiondeprojet.html" >Gestion de Projet</a></li>
 			
@@ -35,25 +35,120 @@
 		</ul>
 	</nav>
 	
-<section>
+<section>	
+
+    <h2>Proposition pour les gestionnaires de bâtiments de l'IUT</h2>
+
+    <h3>Objectif :</h3>
+    <p>Créer une interface conviviale et simple pour la visualisation des données de capteurs.</p>
+
+    <h3>Détails :</h3>
+    <ul>
+        <li><strong>Gestion des Bâtiments :</strong>
+            <ul>
+                <li>Deux bâtiments, chacun ayant un gestionnaire avec un compte (login et mot de passe).</li>
+            </ul>
+        </li>
+        <li><strong>Capteurs :</strong>
+            <ul>
+                <li>Deux capteurs (types au choix) par bâtiment.</li>
+            </ul>
+        </li>
+        <li><strong>Visualisation des Données :</strong>
+            <ul>
+                <li>Tableau de bord Grafana affichant les données des quatre capteurs.</li>
+            </ul>
+        </li>
+        <li><strong>Base de Données :</strong>
+            <ul>
+                <li>Conception et utilisation d'une base de données MySQL.</li>
+            </ul>
+        </li>
+        <li><strong>Site Web Dynamique :</strong>
+            <ul>
+                <li>Hébergement sur un serveur LAMP (Linux, Apache, MySQL, PHP).</li>
+                <li>Présentation des données et des métriques sous forme de tableau.</li>
+                <li>Administration de la base de données via un formulaire sur le site, accessible avec un compte administrateur (login et mot de passe).</li>
+            </ul>
+        </li>
+    </ul>
+
+	<h3>Commencement du projet :</h3>
+    <p>Pour débuter le projet, il nous a fallu faire un diagramme de GANTT afin de nous répartir les différentes tâches à effectuer au cours de cette SAE.</p>
 	
-	<h1>Compte rendu Gestion de Projet</h1>
-		
-           
+	<img src="images/GANTT initial.png" alt="Diagramme de GANTT" width="1000">
+
+	<p>Grâce à ce diagramme de GANTT que nous avons divisé sur les trois semaines (le temps du projet), cela nous a permis de mieux visualiser les tâches à faire et de nous les répartir selon nos préférences et nos compétences.</p>
+	<p>Une fois le diagramme de GANTT terminé, nous avons fait un tri pour suivre l’avancement du projet.</p>
+
+	<img src="images/trello.PNG" alt="TRELLO" width="1000">
+
+	<p>Ce TRELLO nous a permis de suivre l’avancement du projet avec des tâches à effectuer et à faire ainsi que de lister nos différents problèmes et solutions lors du projet.</p>
+    <p>Nous avons aussi utilisé Google Drive pour partager de nombreux éléments comme des captures d’écran et le compte rendu.</p>
+    <p>Nous avons aussi utilisé GitHub, ce qui nous a permis de faire les sauvegardes de notre site, et que tout le monde du groupe ait accès à ses données.</p>
+
+	<h3>Livrable 1</h3>
+	<p>Pour le livrable 1, il nous a fallu commencer les schémas de conception de la base de données.</p>
+	<img src="images/table1.png" alt="TABLE BD" width="600">
+	<img src="images/shema.png" alt="Shema" width="600">
+	
+	<h3>Livrable 2</h3>
+	<p>Ensuite, pour le livrable numéro deux, il nous a fallu faire un flowchart ainsi qu’un Dashboard Grafana. Nous avons effectué ce travail sur une machine virtuelle, mais avant toute chose, nous l’avons paramétrée, configurée et avons installé des logiciels selon le TP donné.</p>
+	<p> Nous avons d'abord paramétré le Nodered pour une salle pour un test, puis sur 4 salle de l'IUT.</p>
+	
+	<p> Nous avons dabors vérifier que nous obetenons bien les valeurs souhaiter dans la base de donnée InfluxDB</p>
+	<img src="images/inluxdb.PNG" alt="InfluxDB" width="600">
+
+	<p>Voici le resultat pour une salle de tP</p>
+	<img src="images/nodered.PNG" alt="Nodered" width="600">
+	
+	<p>Ensuite nous l'avons recopier 4x en changent les parametres de récupérations pour les differentes salles</p>
+	<p>Voici le resultat obtenue :</p>
+	<img src="images/jaugeX2nodered.PNG" alt="Nodered" width="300" height="500">
+
+	<p> Pour terminer sur Graphana, aprés l'avoir configurer nous obtenons un deux graphe ( un pour chauqe bâtiment, ainsi que les jauges de températures</p>
+	<img src="images/courbe.PNG" alt="Courbe" width="600">
+	<img src="images/jauge.PNG" alt="Jauge" width="600">
+
+	<h3>GANTT Final :</h3>
+	<img src="images/SAE23_final.jpg" alt="Diagramme de GANTT" width="1000">
+
+	<h3>Synthèse personnelle</h3>
+ 
+	<ul>
+        <li><strong>FERNANDES</strong>
+            <ul>
+                <li>Pour ma part, j’ai effectué la post-installation de la machine virtuelle ainsi que l’installation de docker. J’ai aussi installé et sécurisé le serveur XAMPP. Avec mon collègue Piquemal, nous avons effectué le Node red ainsi que InfluxDB. J’ai également participé à la création du site Web et à la récupération de données.</li>
+				<li>Je trouve que ce projet rassemble beaucoup de compétences et connaissances acquises au cours du deuxième semestre. Le temps pour effectuer ce projet a été, je trouve, assez court, mais je pense que cela est dû aux nombreux problèmes rencontrés en début de projet. Pour terminer, je trouve que l’ensemble de l’équipe a été compétente, et nous avons pu nous entraider entre nous.</li>
+			</ul>
+        </li>
+        <li><strong>BENNE</strong>
+            <ul>
+                <li>Durant cette saé, j'ai réalisé divers travaux. Pour commencer j'ai participé activement à la préparation du 1er livrable (conception de la BD) car je savais que par la suite c'est moi qui allait la créer. Dans un second temps j'ai également participé à la mise en place d'InfluxDB. Pour finir, j'ai fait pas mal de PHP pour les différentes pages de notre site web.</li>
+            </ul>
+        </li>
+        <li><strong>PIQUEMAL</strong>
+            <ul>
+                <li>Lors de la réalisation de cette SAE 23, j’ai su développer mes compétences de travail en équipe et de gestion de 						projet. Pour le niveau technique, cette SAE a été assez compliquée, regroupant des matières ou je n’était pas forcément 					super à l’aise. Finalement, avec de la persévérance et de l’implication, j’ai su réaliser les tâches qui m'étaient 							attribuées, et finir dans les temps. J’ai rencontré pas mal de difficultés, mais grâce à ça j’ai pu m’améliorer.
+				</li>
+            </ul>
+        </li>
+        
+
+	<h3>Problèmes rencontrés / Solutions proposées</h3>
+        <p>Tout au long de cette saé, nous avons rencontrés de multiples problèmes. Nous avons pu résoudre la plupart, mais certains étaient très complexes et nous ont fait perdre beaucoup de temps. Par exemple plusieurs fois la VM bugguait et par conséquent certains services ne fonctionnaient pas. On essayait donc de trouver des solutions pendant des heures pour rien. 
+            On ne sait pas pourquoi mais les 3/4 du temps le problème était résolu en redémarrant la VM, mais d'après d'autres camarades de promo, la VM centos n'était pas vraiment la meilleure à utiliser.
+            Nous avons également réalisé une erreur bête au début à la création de la VM : nou n'avions pas cliqué sur le disque d'installation de l'OS qui était sur le bureau de la VM. Cela à amené à de nombreux problèmes d'installations de xampp ou autres.
+        </p>
+
+	<h3>Degré de satisfaction du cahier des charges</h3>
+
+	<p>En ce qui concerne le cahier des charges, nous avons essayé de le respecter au maximum. Cependant, quelques petits détails sur le site n'ont pas pu être terminés dans le temps imparti.
+	</p>
+
+
 </section>
 
-  <aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-	<!-- Compléter les hyperliens avec vos références -->
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsa%C3%A914%2Feportfolio.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsaé14%2Fstyles%2Fstyle2.css" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-  </aside>
 
 
 <footer>

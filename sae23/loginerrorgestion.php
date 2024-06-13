@@ -1,5 +1,5 @@
 <?php
-	// Démarrage de la session
+	
 	session_start();
 ?>
 
@@ -41,9 +41,9 @@
 	</nav>
 		<!-- Affichage entete -->
 		<?php 
-			$_SESSION = array(); // Réinitialisation du tableau de session
-			session_destroy();   // Destruction de la session
-			unset($_SESSION);    // Destruction du tableau de session
+			$_SESSION = array(); 
+			session_destroy();   
+			unset($_SESSION);    
 			include("entete.html");
 		?>
 		<section>
@@ -56,18 +56,7 @@
 			<p class="erreur">Mot de passe non saisi ou erron&eacute; !!!</p>
 			
 		</section>
-		<aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-	<!-- Compléter les hyperliens avec vos références -->
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsa%C3%A914%2Feportfolio.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsaé14%2Fstyles%2Fstyle2.css" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-  </aside>
+		
 
 
 <footer>

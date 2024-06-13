@@ -1,8 +1,3 @@
-<?php
-	// Start session
-	session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -30,33 +25,28 @@
 	
 	<nav>
 		<ul id="navigation">
-            <li><a href="index.html" >Accueil</a></li>
+			<li><a href="index.html" >Accueil</a></li>
 			<li><a href="administration.html" >Administration</a></li>
-     		<li><a href="consultation.html" >Consultation</a></li>			
+     		<li><a href="consultation.php" >Consultation</a></li>			
 			<li><a href="gestion.html" >Gestion</a></li>
 			<li><a href="gestiondeprojet.html" >Gestion de Projet</a></li>
 			
 		
 		</ul>
 	</nav>
-		<!-- Affichage entete -->
-		<?php 
-			$_SESSION = array(); // Reset session table
-			session_destroy();   // Delete session
-			unset($_SESSION);    // Delete session table
-			include("entete.html");
-		?>
-		<section>
-			<p>
-				<br />
-				<em><strong>Administration de la base : Acc&egrave;s limit&eacute; aux personnes autoris&eacute;es</strong></em>
-				<br />
-			</p>
-			<br />
-			<p class="erreur">Mot de passe non saisi ou erron&eacute; !!!</p>
-			
-		</section>
+	
+<section>
+	
+<h1>Choisissez une redirection :</h1>
+	<ul>
+		<li><a href="choix_ajout.php">Ajouter un élément</a></li>
+		<li><a href="choix_supp.php">Supprimer un élément</a></li>
+	</ul
 		
+           
+</section>
+
+  
 
 
 <footer>
@@ -69,4 +59,3 @@
 
 </body>
 </html>
- 

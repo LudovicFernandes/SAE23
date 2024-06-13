@@ -27,7 +27,7 @@
 		<ul id="navigation">
 			<li><a href="index.html" >Accueil</a></li>
 			<li><a href="administration.html" >Administration</a></li>
-     		<li><a href="consultation.html" >Consultation</a></li>			
+     		<li><a href="consultation.php" >Consultation</a></li>			
 			<li><a href="gestion.html" >Gestion</a></li>
 			<li><a href="gestiondeprojet.html" >Gestion de Projet</a></li>
 			
@@ -39,26 +39,14 @@
 	
 <h1>Choisissez une redirection :</h1>
 	<ul>
-		<li><a href="ajoutbat.php">Ajout</a></li>
-		<li><a href="ajoutsalle.php">Supp</a></li>
-		<li><a href="ajoutcapteur.php">Redirection 3</a></li>
+		<li><a href="batE.php">Bâtiment E</a></li>
+		<li><a href="batB.php">Bâtiment B</a></li>
 	</ul
 		
            
 </section>
 
-  <aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-	<!-- Compléter les hyperliens avec vos références -->
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsa%C3%A914%2Feportfolio.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Ffernandes1.atwebpages.com%2Fsaé14%2Fstyles%2Fstyle2.css" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-  </aside>
+  
 
 
 <footer>

@@ -7,7 +7,7 @@
 	// Script de vérification du mot de passe d'administration, en utilisant la table Connexion
 
 	if(empty($motdep))
-		header("Location:login_error.php");
+		header("Location:loginerror.php");
 	else
      {
 		/* Accès à la base */
@@ -30,7 +30,7 @@
             session_destroy();   // Destruction de la session
             unset($_SESSION);    // Destruction du tableau de session
             mysqli_close($id_bd);
-            echo "<script type='text/javascript'>document.location.replace('loginerror.php');</script>";
+            echo "<script type='text/javascript'>document.location.replace('loginerrorgestion.php');</script>";
 		 }
      } 
  ?>

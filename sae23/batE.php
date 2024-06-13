@@ -42,9 +42,10 @@
 	<?php
 session_start();
 
-
+// Database connection
 include("mysql.php");
 
+// SQL query to retrieve the last sensor value in "E" rooms
 $query = "SELECT id_mesure, valeur, date, horaire, nom_capteur, nom_salle
           FROM Mesure
           JOIN Salle s ON nom_salle = nom_salle
@@ -52,10 +53,10 @@ $query = "SELECT id_mesure, valeur, date, horaire, nom_capteur, nom_salle
           ORDER BY horaire DESC
           LIMIT 2";
 
-
+// Execute request
 $result = $id_bd->query($query);
 
-
+// Check if the request was successful
 if (!$result) {
     die("Erreur lors de l'exécution de la requête : " . $id_bd->error);
 }
@@ -70,7 +71,7 @@ echo "<table border='1'>
             <th>Nom Salle</th>
         </tr>";
 
-
+// Check if any results have been returned
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo "<tr>
@@ -90,57 +91,87 @@ echo "</table>";
 
 $id_bd->close();
 ?>
-<h1>Bâtiment B</h1>
+
+<h1> Température Salle E004</h1>
 <?php
 
+    
+    include("mysql.php");
 
-include("mysql.php");
+    
+    $query = "SELECT MAX(valeur) AS valeur_max, MIN(valeur) AS valeur_min, AVG(valeur) AS valeur_moyenne
+              FROM Mesure
+              WHERE nom_capteur = 'AM107-27'";
 
+    
+    $result = $id_bd->query($query);
 
-$query = "SELECT id_mesure, valeur, date, horaire, nom_capteur, nom_salle
-          FROM Mesure
-          JOIN Salle s ON nom_salle = nom_salle
-          WHERE nom_salle LIKE 'B%'
-          ORDER BY horaire DESC
-          LIMIT 2";
-
-$result = $id_bd->query($query);
-
-
-if (!$result) {
-    die("Erreur lors de l'exécution de la requête : " . $id_bd->error);
-}
-
-echo "<table border='1'>
-        <tr>
-            <th>ID Valeur</th>
-            <th>Valeur</th>
-            <th>Date</th>
-            <th>Heure</th>
-            <th>Nom Capteur</th>
-            <th>Nom Salle</th>
-        </tr>";
-
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>" . $row['id_mesure'] . "</td>
-                <td>" . $row['valeur'] . "</td>
-                <td>" . $row['date'] . "</td>
-                <td>" . $row['horaire'] . "</td>
-                <td>" . $row['nom_capteur'] . "</td>
-                <td>" . $row['nom_salle'] . "</td>
-              </tr>";
+    
+    if (!$result) {
+        die("Erreur lors de l'exécution de la requête : " . $id_bd->error);
     }
-} else {
-    echo "<tr><td colspan='6'>Aucune donnée trouvée.</td></tr>";
-}
 
-echo "</table>";
+    
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        echo "<table border='1'>
+                <tr>
+                    <th>Valeur Max</th>
+                    <th>Valeur Min</th>
+                    <th>Valeur Moyenne</th>
+                </tr>
+                <tr>
+                    <td>" . number_format($row['valeur_max'], 2) . "</td>
+                    <td>" . number_format($row['valeur_min'], 2) . "</td>
+                    <td>" . number_format($row['valeur_moyenne'], 2) . "</td>
+                </tr>
+              </table>";
+    } else {
+        echo "<p>Aucune donnée trouvée pour la salle E004.</p>";
+    }
 
-$id_bd->close();
-?>
+    $id_bd->close();
+    ?>
+<h1> Température Salle E106</h1>
+<?php
+
+    
+    include("mysql.php");
+
+    
+    $query = "SELECT MAX(valeur) AS valeur_max, MIN(valeur) AS valeur_min, AVG(valeur) AS valeur_moyenne
+              FROM Mesure
+              WHERE nom_capteur = 'AM107-36'";
+
+    
+    $result = $id_bd->query($query);
+
+    
+    if (!$result) {
+        die("Erreur lors de l'exécution de la requête : " . $id_bd->error);
+    }
+
+    
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        echo "<table border='1'>
+                <tr>
+                    <th>Valeur Max</th>
+                    <th>Valeur Min</th>
+                    <th>Valeur Moyenne</th>
+                </tr>
+                <tr>
+                    <td>" . number_format($row['valeur_max'], 2) . "</td>
+                    <td>" . number_format($row['valeur_min'], 2) . "</td>
+                    <td>" . number_format($row['valeur_moyenne'], 2) . "</td>
+                </tr>
+              </table>";
+    } else {
+        echo "<p>Aucune donnée trouvée pour la salle E106.</p>";
+    }
+
+    $id_bd->close();
+    ?>
 
            
 </section>
